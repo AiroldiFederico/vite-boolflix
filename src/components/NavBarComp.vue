@@ -52,7 +52,7 @@
 
         padding: 0.5rem 1rem !important;
         img {
-            width: 10rem;
+            width: 12rem;
             height: auto;
 
         }
