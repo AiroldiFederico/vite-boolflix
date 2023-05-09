@@ -1,5 +1,5 @@
 <script>
-
+    import {store} from '../store'
     export default{
 
         name: "NavBarComp",
@@ -11,7 +11,7 @@
         data(){
             return{
                
-
+                store,
 
             }
         },
@@ -33,7 +33,7 @@
 
         <!-- SEARCH BAR -->
         <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" v-model="store.SearchBar">
             <button class="btn btn-outline-danger" type="submit">Search</button>
         </form>
 
@@ -47,6 +47,8 @@
 <style lang="scss" scoped>
 
     div {
+
+        max-height: 5.3rem;
 
         padding: 0.5rem 1rem !important;
         img {
