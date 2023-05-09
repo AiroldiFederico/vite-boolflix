@@ -1,6 +1,6 @@
 <script>
     import {store} from '../store'
-    import axios from 'axios'
+    //import axios from 'axios'
     export default{
         
         name: "MainComp",
@@ -12,24 +12,26 @@
         data(){
             return{
                
-                API_KEY: '2ce4dce0e1db39d63e530efad019b36a',
+               // API_KEY: '2ce4dce0e1db39d63e530efad019b36a',
                 store,
 
             }
         },
         methods: {
-
+            // callApi() {
+            //     //Search Movie Database API
+            //     axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.API_KEY}&query=${store.SearchBar}`)
+            //     .then(response => {
+            //         this.store.MovieFind = response.data.results;
+            //         console.log(this.store.MovieFind)
+            //         console.log(`https://api.themoviedb.org/3/search/movie?api_key=${this.API_KEY}&query=${store.SearchBar}`)
+            //     })
+            // }
 
         },
 
         created() {
-            //Search Movie Database API
-            //axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.API_KEY}&query=${encodeURIComponent(store.SearchBar)}`)
-            axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.API_KEY}&query=ritorno+al+fut`)
-            .then(response => {
-                this.store.MovieFind = response.data.results;
-                console.log(this.store.MovieFind)
-            })
+
         }
     }
     
