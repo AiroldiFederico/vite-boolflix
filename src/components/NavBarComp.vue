@@ -2,7 +2,7 @@
 
     export default{
 
-        name: "NameComp",
+        name: "NavBarComp",
         
         components: {
             
@@ -28,7 +28,7 @@
 
 <template>
     <div id="NameComp">
-        <h2>Titolo componente</h2>
+
     </div>
 </template>
 

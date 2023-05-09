@@ -1,10 +1,10 @@
 # ESERCIZIO
 
-### Title: placeholder
+### Title: vite-boolfix
 ---
 **ALUNNO:** FEDERICO AIROLDI
 
-**DATA:** xx-xx-xxxx
+**DATA:** 09-05-2023
 
 **STATO DELL'ESERCIZIO:** Work in progress
 
