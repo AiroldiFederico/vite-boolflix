@@ -1,6 +1,6 @@
 # ESERCIZIO
 
-### Title: vite-boolfix
+### Title: vite-boolflix
 ---
 **ALUNNO:** FEDERICO AIROLDI
 
