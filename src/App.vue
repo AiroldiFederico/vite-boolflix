@@ -15,6 +15,15 @@ const chiamataApi = () => {
       console.log(store.MovieFind)
       console.log(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${store.SearchBar}`)
   })
+
+  //Search TvSeries Database API
+  axios.get(`https://api.themoviedb.org/3/search/tv?api_key=${API_KEY}&query=${store.SearchBar}`)
+  .then(response => {
+      store.SerieFind = response.data.results;
+      console.log(store.SerieFind)
+      console.log(`https://api.themoviedb.org/3/search/tv?api_key=${API_KEY}&query=${store.SearchBar}`)
+  })
+
 }
 
 onMounted(() => {
