@@ -17,9 +17,11 @@
             }
         },
 
-        methods() {
-
-        }
+        methods: {
+            getVoteMovie(){
+                return Math.ceil(this.store.MovieFind[index].vote_average / 2);
+            }
+        },
 
     }
     
@@ -43,7 +45,7 @@
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">{{store.MovieFind[index].original_title}}</li>
                         <li class="list-group-item">Lingua: {{store.MovieFind[index].original_language}}</li>
-                        <li class="list-group-item">Voto: {{store.MovieFind[index].vote_average}}</li>
+                        <li class="list-group-item">Voto: {{Math.ceil(this.store.MovieFind[index].vote_average / 2)}}</li>
                     </ul>
                 </div>
             </div>
@@ -62,7 +64,7 @@
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item">{{store.SerieFind[index].original_name}}</li>
                       <li class="list-group-item">Lingua: {{store.SerieFind[index].original_language}}</li>
-                      <li class="list-group-item">Voto: {{store.SerieFind[index].vote_average}}</li>
+                      <li class="list-group-item">Voto: {{Math.ceil(this.store.SerieFind[index].vote_average / 2)}}</li>
                     </ul>
                 </div>
             </div>
