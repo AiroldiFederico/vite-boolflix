@@ -17,6 +17,10 @@
             }
         },
 
+        methods() {
+
+        }
+
     }
     
 </script>
@@ -31,7 +35,7 @@
         <div class="card-container">
             <div  v-for="(object, index) in store.MovieFind" key="index">
                 <div class="card" style="width: 18rem;">
-                    <img :src="`https://image.tmdb.org/t/p/w342${store.MovieFind[index].poster_path}`" class="card-img-top" alt="...">
+                    <img :src="store.MovieFind[index].poster_path ? `https://image.tmdb.org/t/p/w342${store.MovieFind[index].poster_path}` : '../img/noimage.jpg'" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{store.MovieFind[index].title}}</h5>
                         <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
@@ -50,7 +54,7 @@
         <div class="card-container">
             <div  v-for="(object, index) in store.SerieFind" key="index">
                 <div class="card" style="width: 18rem;">
-                    <img :src="`https://image.tmdb.org/t/p/w342${store.SerieFind[index].poster_path}`" class="card-img-top" alt="...">
+                    <img :src="store.SerieFind[index].poster_path ? `https://image.tmdb.org/t/p/w342${store.SerieFind[index].poster_path}` : '../img/noimage.jpg'" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">{{store.SerieFind[index].title}}</h5>
                       <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
