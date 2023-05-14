@@ -45,7 +45,9 @@
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">{{store.MovieFind[index].original_title}}</li>
                         <li class="list-group-item">Lingua: {{store.MovieFind[index].original_language}}</li>
-                        <li class="list-group-item">Voto: {{Math.ceil(this.store.MovieFind[index].vote_average / 2)}}</li>
+                        <li class="list-group-item">Voto:
+                            <i v-for="n in 5" class="fa-star" :class=" (n <= Math.ceil(this.store.MovieFind[index].vote_average / 2)) ? 'fa-solid' : 'fa-regular'"></i>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -64,7 +66,9 @@
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item">{{store.SerieFind[index].original_name}}</li>
                       <li class="list-group-item">Lingua: {{store.SerieFind[index].original_language}}</li>
-                      <li class="list-group-item">Voto: {{Math.ceil(this.store.SerieFind[index].vote_average / 2)}}</li>
+                      <li class="list-group-item">Voto:
+                        <i v-for="n in 5" class="fa-star" :class=" (n <= Math.ceil(this.store.SerieFind[index].vote_average / 2)) ? 'fa-solid' : 'fa-regular'"></i>
+                      </li>
                     </ul>
                 </div>
             </div>
@@ -102,6 +106,10 @@ div {
         font-weight: bold;
         border-top: solid white 0.1rem;
 
+    }
+
+    i {
+        color: black;
     }
 
 
